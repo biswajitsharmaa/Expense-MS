@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding-top: 3px;
+}
+/*First the table container is hidden*/
+#table-container {
+  visibility: hidden;
+}
+
+/*When uses enters item-name, first letter of the word is made uppercase*/
+#item-name {
+  text-transform: capitalize;
+}

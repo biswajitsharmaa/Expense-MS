@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense-MS</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="action.js"></script>
+  </head>
+  <body>
+    <!-- heading section -->
+    <div
+      style="width: 100%; height: 40px;"
+      class="bg-dark justify-content-center"
+    >
+      <h1>
+        Expense Management System
+      </h1>
+    </div>
+    <!-- quotation -->
+    <div class="card">
+      <div class="card-header">
+        Quote
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>
+            No man is rich whose expenditure exceeds his means; and no one is
+            poor whose incomings exceed his outgoings
+          </p>
+          <footer class="blockquote-footer">
+            Thomas Chandler Haliburton
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- table where the item details are saved and it is invisible when there is no item added // if item is added then it is visible -->
+    <div id="table-container">
+      <table class="table" id="data-table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- Separate table which displays the grand total of the total expenses -->
+    <div id="grand-total-div"></div>
+    <form name="add-item" id="input-field">
+      <div class="p-5 form-row">
+        <!-- Item name input -->
+        <div class="p-1 col-lg-6">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Item Name"
+            id="item-name"
+            required
+            autocomplete="off"
+          />
+        </div>
+        <!-- Item Quantity input -->
+        <div class="p-1 col-lg-2">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Quantity"
+            id="item-quantity"
+            min="1"
+            required
+          />
+          <!-- Item price input -->
+        </div>
+        <div class="p-1 col-lg-2">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Price per item"
+            id="item-price"
+            min="0"
+            required
+          />
+        </div>
+        <!-- add-item button for every row -->
+        <div class="p-1 col-lg-2">
+          <button
+            id="button"
+            type="button"
+            onclick="addItem(event)"
+            class="btn btn-outline-primary"
+          >
+            Add Item
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="action.js"></script>
+  </body>
+</html>
